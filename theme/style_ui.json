@@ -1,0 +1,264 @@
+[
+  {
+    "title": {
+      "en": "Main colors",
+      "fr": "Couleurs principales"
+    },
+    "params": [
+      "main_background_color",
+      "main_text_color",
+      "main_accent_color",
+      "headings_color",
+      "main_link_color",
+      "main_link_hover_color"
+    ]
+  },
+  {
+    "title": {
+      "en": "Main fonts",
+      "fr": "Polices principales"
+    },
+    "params": [
+      "main_font_family",
+      "main_font_weight",
+      "main_font_size",
+      "headings_font_family",
+      "headings_font_weight",
+      "headings_text_transform",
+      "base_line_height_ratio"
+    ],
+    "general_settings": [
+      "typekit"
+    ]
+  },
+  {
+    "title": {
+      "en": "Pages title and content",
+      "fr": "Titre et contenu des pages"
+    },
+    "params": [
+      "page_title_relative_font_size",
+      "images_frame_width",
+      "images_frame_color",
+      "thumbnails_grid_margin"
+    ],
+    "components": [
+      "mainc"
+    ]
+  },
+  {
+    "title": {
+      "en": "Layout and dimensions",
+      "fr": "Mise en page et tailles"
+    },
+    "params": [
+      "layout_horizontal_breakpoint",
+      "page_top_bottom_vh_margin",
+      "page_sides_vw_margin",
+      "max_text_block_rem_width",
+      "main_background_image"
+    ],
+    "components": [
+      "NONE*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Horizontal logo bar",
+      "fr": "Barre horizontale du logo"
+    },
+    "params": [
+      "logo_background_color",
+      "logo_background_opacity",
+      "logo_alignment",
+      "logo_img_max_width",
+      "logo_font_size",
+      "logo_text_color",
+      "logo_font_family",
+      "logo_font_weight",
+      "logo_text_transform"
+    ],
+    "components": [
+      "logo"
+    ]
+  },
+  {
+    "title": {
+      "en": "Navigation column",
+      "fr": "Colonne de navigation"
+    },
+    "params": [
+      "navigation_block_font_family",
+      "navigation_block_font_weight",
+      "navigation_block_text_color",
+      "navigation_block_link_color",
+      "navigation_block_link_hover_color",
+      "navigation_block_active_menu_color",
+      "navigation_block_background_color",
+      "navigation_block_background_opacity",
+      "navigation_block_internal_alignment",
+      "left_column_rem_width"
+    ],
+    "blocks": [
+      "navib"
+    ],
+    "components": [
+      "menu*",
+      "local*",
+      "links*",
+      "hdtxt*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Menu",
+      "fr": "Menu"
+    },
+    "params": [
+      "menu_and_locale_relative_font_size",
+      "menu_active_item_underline",
+      "menu_item_text_transform",
+      "sub_menu_font_size",
+      "left_column_sub_menu_indent"
+    ],
+    "components": [
+      "menu"
+    ]
+  },
+  {
+    "title": {
+      "en": "Language",
+      "fr": "Langue"
+    },
+    "components": [
+      "local"
+    ]
+  },
+  {
+    "title": {
+      "en": "Header text",
+      "fr": "Texte d'en-tête"
+    },
+    "components": [
+      "hdtxt"
+    ]
+  },
+  {
+    "title": {
+      "en": "Social network icons",
+      "fr": "Icônes réseaux sociaux"
+    },
+    "params": [
+      "external_links_relative_size",
+      "external_links_palette",
+      "external_links_border_width",
+      "external_links_border_radius"
+    ],
+    "components": [
+      "links"
+    ]
+  },
+  {
+    "title": {
+      "en": "Search",
+      "fr": "Recherche"
+    },
+    "params": [
+      "search_drawer_tab_background_color",
+      "search_drawer_tab_text_color",
+      "search_component_input_color",
+      "search_component_background_color",
+      "search_component_background_opacity"
+    ],
+    "components": [
+      "searc"
+    ]
+  },
+  {
+    "title": {
+      "en": "Footer",
+      "fr": "Pied-de-page"
+    },
+    "params": [
+      "footer_text_color",
+      "footer_link_color",
+      "footer_link_hover_color",
+      "footer_relative_font_size"
+    ],
+    "components": [
+      "fttxt"
+    ]
+  },
+  {
+    "title": {
+      "en": "Buttons",
+      "fr": "Boutons"
+    },
+    "params": [
+      "buttons_background_color",
+      "buttons_text_color",
+      "buttons_background_color_hover",
+      "buttons_text_color_hover",
+      "buttons_relative_font_size",
+      "buttons_text_transform",
+      "buttons_border_width",
+      "buttons_border_radius",
+      "buttons_box_shadow"
+    ],
+    "components": [
+      "mainc*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Custom slideshows",
+      "fr": "Diaporamas personnalisés"
+    },
+    "params": [
+      "slideshow_overlay_color_light",
+      "slideshow_overlay_color_dark"
+    ],
+    "components": [
+      "mainc*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Fullscreen mode",
+      "fr": "Mode plein écran"
+    },
+    "params": [
+      "fullscreen_background_color"
+    ],
+    "components": [
+      "NONE*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Overlays' background",
+      "fr": "Eléments en surimpression"
+    },
+    "params": [
+      "overlay_ctrl_background_color",
+      "overlay_ctrl_background_alpha"
+    ],
+    "components": [
+      "mainc*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Popups",
+      "fr": "Popups"
+    },
+    "params": [
+      "popup_background_color",
+      "popup_text_color",
+      "popup_link_color"
+    ],
+    "components": [
+      "searc*"
+    ]
+  }
+]

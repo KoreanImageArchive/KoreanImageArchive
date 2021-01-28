@@ -1,0 +1,1025 @@
+{
+  "sass_api_version": {
+    "value": "2"
+  },
+  "layout_horizontal_breakpoint": {
+    "type": "select",
+    "type_spec": [
+      "default=Tablets",
+      "choices=Tablets,All device sizes"
+    ],
+    "value": "Tablets",
+    "title": {
+      "en": "Devices with hamburger menu",
+      "fr": "Appareils avec menu hamburger"
+    },
+    "help": {
+      "en": "Use hamburger on screen sizes up to:",
+      "fr": "Utiliser hamburger sur tailles d'écrans jusqu'à:"
+    }
+  },
+  "buttons_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional",
+      "with_alpha"
+    ],
+    "value": "rgb(0, 52, 120)",
+    "title": {
+      "en": "Background color",
+      "fr": "Couleur de fond"
+    },
+    "help": {
+      "en": "Can be made fully transparent (for example with a border)",
+      "fr": "Peut être totalement transparent (par ex avec une bordure)"
+    }
+  },
+  "buttons_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Text color",
+      "fr": "Couleur du texte"
+    }
+  },
+  "buttons_background_color_hover": {
+    "type": "color",
+    "type_spec": [
+      "optional",
+      "with_alpha"
+    ],
+    "value": "",
+    "title": {
+      "en": "Background color (mouse over)",
+      "fr": "Couleur de fond (survol souris)"
+    }
+  },
+  "buttons_text_color_hover": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Text color (mouse over)",
+      "fr": "Couleur du texte (survol souris)"
+    }
+  },
+  "buttons_relative_font_size": {
+    "type": "select",
+    "type_spec": [
+      "default=S",
+      "choices=S,L,XL"
+    ],
+    "value": "S",
+    "title": {
+      "en": "Size",
+      "fr": "Taille"
+    }
+  },
+  "buttons_text_transform": {
+    "type": "text-transform",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "capitalize",
+    "title": {
+      "en": "Text case",
+      "fr": "Casse du texte"
+    }
+  },
+  "buttons_border_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=5",
+      "default=0"
+    ],
+    "value": "0",
+    "title": {
+      "en": "Border width",
+      "fr": "Largeur de la bordure"
+    }
+  },
+  "buttons_border_radius": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=20",
+      "default=0"
+    ],
+    "value": "8",
+    "title": {
+      "en": "Buttons rounded corners",
+      "fr": "Coins arrondis des boutons"
+    }
+  },
+  "buttons_box_shadow": {
+    "type_spec": [
+      "default=0 0px 0px rgba(0, 0, 0, 0.5)"
+    ],
+    "value": "0 0px 0px rgba(0, 0, 0, 0.5)",
+    "title": {
+      "en": "Buttons shadow",
+      "fr": "Ombre autour des boutons"
+    }
+  },
+  "main_font_family": {
+    "type": "font",
+    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "replaces": [
+      "default_font_family"
+    ],
+    "title": {
+      "en": "Main font",
+      "fr": "Police principale"
+    }
+  },
+  "main_font_size": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=pt",
+      "min=8",
+      "max=24",
+      "default=12"
+    ],
+    "value": "12",
+    "replaces": [
+      "default_font_size"
+    ],
+    "title": {
+      "en": "Font size",
+      "fr": "Taille de police"
+    }
+  },
+  "base_line_height_ratio": {
+    "type": "numeric",
+    "type_spec": [
+      "min=1.2",
+      "max=2",
+      "pres=1",
+      "step=0.1",
+      "default=1.6"
+    ],
+    "value": "1.6",
+    "title": {
+      "en": "Line height",
+      "fr": "Hauteur de ligne"
+    },
+    "help": {
+      "en": "Ratio between line spacing and text size.",
+      "fr": "Ratio entre hauteur de ligne et taille du texte"
+    }
+  },
+  "main_font_weight": {
+    "type": "font-weight",
+    "value": "bold",
+    "replaces": [
+      "default_font_weight"
+    ],
+    "title": {
+      "en": " Text font weight",
+      "fr": "Epaisseur du texte"
+    }
+  },
+  "main_accent_color": {
+    "type": "color",
+    "value": "#003478",
+    "replaces": [
+      "default_accent_color"
+    ],
+    "title": {
+      "en": "Accent color",
+      "fr": "Couleur accent"
+    },
+    "help": {
+      "en": "Used by default in links, buttons, logo, etc...",
+      "fr": "Utilisée par défaut pour les liens, boutons, logo, etc..."
+    }
+  },
+  "main_link_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#006fff",
+    "replaces": [
+      "default_link_color"
+    ],
+    "title": {
+      "en": "Links color",
+      "fr": "Couleur des liens"
+    }
+  },
+  "main_link_hover_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#003478",
+    "replaces": [
+      "default_link_hover_color"
+    ],
+    "title": {
+      "en": "Links color (mouse over)",
+      "fr": "Couleurs des lien (passage souris)"
+    }
+  },
+  "main_text_color": {
+    "type": "color",
+    "value": "#444444",
+    "replaces": [
+      "default_text_color"
+    ],
+    "title": {
+      "en": "Text color",
+      "fr": "Couleur du texte"
+    }
+  },
+  "search_drawer_tab_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "replaces": [
+      "drawer_tab_background_color"
+    ],
+    "title": {
+      "en": "Tab background color",
+      "fr": "Couleur de fond de l'onglet"
+    }
+  },
+  "search_drawer_tab_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "replaces": [
+      "drawer_tab_text_color"
+    ],
+    "title": {
+      "en": "Tab text color",
+      "fr": "Couleur du texte de l'onglet"
+    }
+  },
+  "external_links_border_radius": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=%",
+      "max=50",
+      "default=50"
+    ],
+    "value": "50",
+    "title": {
+      "en": "Rounding shape",
+      "fr": "Forme arrondie"
+    },
+    "help": {
+      "en": "From 0% for square icons to 50% for round icons.",
+      "fr": "De 0% pour des icônes carrées à 50% pour des icônes rondes."
+    }
+  },
+  "external_links_border_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=10",
+      "default=1"
+    ],
+    "value": "0",
+    "title": {
+      "en": "Border width",
+      "fr": "Largeur de la bordure"
+    },
+    "help": {
+      "en": "Icons border width. 0px to remove border.",
+      "fr": "Largeur de la bordure de chaque icône. 0px pour supprimer la bordure."
+    }
+  },
+  "external_links_palette": {
+    "type": "select",
+    "type_spec": [
+      "choices=normal,inverted",
+      "default=normal"
+    ],
+    "value": "normal",
+    "title": {
+      "en": "Color palette",
+      "fr": "Palette de couleurs"
+    },
+    "help": {
+      "en": "\"normal\" (like menu links) or \"inverted\" (badges).",
+      "fr": "\"normal\" (comme les autres liens) ou \"inverted\" (badges)."
+    }
+  },
+  "external_links_relative_size": {
+    "type": "select",
+    "type_spec": [
+      "default=L",
+      "choices=S,M,L,XL,XXL"
+    ],
+    "value": "L",
+    "replaces": [
+      {
+        "external_links_size_large": "external_links_size_to_relative"
+      }
+    ],
+    "title": {
+      "en": "Icon size",
+      "fr": "Tailles des icônes"
+    }
+  },
+  "footer_relative_font_size": {
+    "type": "select",
+    "type_spec": [
+      "default=N",
+      "choices=S,N,L,XL"
+    ],
+    "value": "N",
+    "replaces": [
+      {
+        "footer_font_size": "font_size_to_relative"
+      }
+    ],
+    "title": {
+      "en": "Footer font size",
+      "fr": "Taille de police du pied de page"
+    }
+  },
+  "footer_link_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Footer links color",
+      "fr": "Couleur des liens du pied de page"
+    }
+  },
+  "footer_link_hover_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Footer links color (mouse over)",
+      "fr": "Couleur des liens du pied de page (passage souris)"
+    }
+  },
+  "footer_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Footer text color",
+      "fr": "Couleur du texte du pied de page"
+    }
+  },
+  "fullscreen_background_color": {
+    "type": "color",
+    "type_spec": [
+      "default=#000000"
+    ],
+    "value": "#000000",
+    "title": {
+      "en": "Background color",
+      "fr": "Couleur de l'arrière plan"
+    }
+  },
+  "thumbnails_grid_margin": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=20",
+      "default=8"
+    ],
+    "value": "8",
+    "replaces": [
+      "grid_margin"
+    ],
+    "title": {
+      "en": "Space around thumbnails",
+      "fr": "Espace autour des vignettes"
+    }
+  },
+  "images_frame_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "replaces": [
+      "image_frame_color"
+    ],
+    "title": {
+      "en": "Image frame color",
+      "fr": "Couleur du cadre des images"
+    }
+  },
+  "images_frame_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=20",
+      "default=0"
+    ],
+    "value": "0",
+    "replaces": [
+      "images_padding"
+    ],
+    "title": {
+      "en": "Border around images",
+      "fr": "Cadre autour des images"
+    }
+  },
+  "left_column_sub_menu_indent": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=30",
+      "default=0"
+    ],
+    "value": "0",
+    "title": {
+      "en": "Sub menus text indent",
+      "fr": "Indentation des sous menus"
+    }
+  },
+  "left_column_rem_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=rem",
+      "min=10",
+      "max=30",
+      "default=14"
+    ],
+    "value": "19",
+    "replaces": [
+      {
+        "left_column_width": "pixel_size_to_rem"
+      }
+    ],
+    "title": {
+      "en": "Left column width",
+      "fr": "Largeur de la colonne de gauche"
+    }
+  },
+  "logo_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Logo background color",
+      "fr": "Couleur de l'arrière plan du logo"
+    }
+  },
+  "logo_background_opacity": {
+    "type": "numeric",
+    "type_spec": [
+      "max=1",
+      "pres=1",
+      "step=0.1",
+      "default=0.9"
+    ],
+    "value": "0.9",
+    "title": {
+      "en": "Logo background opacity",
+      "fr": "Opacité de l'arrière plan du logo"
+    }
+  },
+  "logo_font_family": {
+    "type": "font",
+    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "title": {
+      "en": "Logo font",
+      "fr": "Police du logo"
+    }
+  },
+  "logo_font_weight": {
+    "type": "font-weight",
+    "type_spec": [
+      "default=300"
+    ],
+    "value": "bold",
+    "title": {
+      "en": "Logo text weight",
+      "fr": "Epaisseur du texte du logo"
+    }
+  },
+  "logo_font_size": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "min=8",
+      "max=48",
+      "default=32"
+    ],
+    "value": "26",
+    "replaces": [
+      "logo_height_large"
+    ],
+    "title": {
+      "en": "Logo font size",
+      "fr": "Taille de la police du logo"
+    }
+  },
+  "logo_img_max_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=px",
+      "max=800",
+      "default=250"
+    ],
+    "value": "291",
+    "replaces": [
+      "left_column_width"
+    ],
+    "title": {
+      "en": "Logo image size (max width)",
+      "fr": "Taille du logo image (largeur max)"
+    }
+  },
+  "logo_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#003478",
+    "title": {
+      "en": "Logo text color",
+      "fr": "Couleur du texte du logo"
+    }
+  },
+  "logo_text_transform": {
+    "type": "text-transform",
+    "type_spec": [
+      "default=uppercase"
+    ],
+    "value": "uppercase",
+    "title": {
+      "en": "Logo case",
+      "fr": "Casse du logo"
+    }
+  },
+  "logo_alignment": {
+    "type": "align",
+    "type_spec": [
+      "lcr",
+      "default=left"
+    ],
+    "value": "left",
+    "title": {
+      "en": "Logo justification",
+      "fr": "Alignement du logo"
+    }
+  },
+  "main_background_color": {
+    "type": "color",
+    "value": "#FFFFFF",
+    "title": {
+      "en": "Background color",
+      "fr": "Couleur de l'arrière plan"
+    }
+  },
+  "main_background_image": {
+    "type": "image",
+    "value": "",
+    "title": {
+      "en": "Background image",
+      "fr": "Image en arrière plan"
+    },
+    "help": {
+      "en": "The image will be centered and tiled. Use small texture image, or a very large and highly compressed image. Low contrast works best!",
+      "fr": "L'image sera centrée et répétée. Utilisez un petite image de texture, ou une image de grande taille très compressée. Faible contraste recommandé !"
+    }
+  },
+  "max_text_block_rem_width": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=em",
+      "min=50",
+      "max=200",
+      "default=70"
+    ],
+    "value": "70",
+    "replaces": [
+      {
+        "max_text_block_width": "pixel_size_to_rem"
+      }
+    ],
+    "title": {
+      "en": "Max width for text pages and custom pages",
+      "fr": "Largeur max des pages de texte et pages personnalisées"
+    }
+  },
+  "menu_item_text_transform": {
+    "type": "text-transform",
+    "type_spec": [
+      "default=uppercase"
+    ],
+    "value": "uppercase",
+    "title": {
+      "en": "Menu text case",
+      "fr": "Casse des liens du menu"
+    }
+  },
+  "navigation_block_active_menu_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#0053c1",
+    "title": {
+      "en": "Active menu link color",
+      "fr": "Couleur du lien de menu actif"
+    },
+    "help": {
+      "en": "For link matching current page",
+      "fr": "Pour lien correspondant à la page actuelle"
+    }
+  },
+  "menu_active_item_underline": {
+    "type": "select",
+    "type_spec": [
+      "default=No",
+      "choices=Yes,No"
+    ],
+    "value": "No",
+    "title": {
+      "en": "Underline active link",
+      "fr": "Souligner lien actif"
+    },
+    "help": {
+      "en": "For link matching current page",
+      "fr": "Pour lien correspondant à la page actuelle"
+    }
+  },
+  "navigation_block_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Background color",
+      "fr": "Couleur de fond"
+    }
+  },
+  "navigation_block_background_opacity": {
+    "type": "numeric",
+    "type_spec": [
+      "max=1",
+      "pres=1",
+      "step=0.1",
+      "default=1"
+    ],
+    "value": "1",
+    "title": {
+      "en": "Background opacity",
+      "fr": "Opacité du fond"
+    }
+  },
+  "navigation_block_font_family": {
+    "type": "font",
+    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "title": {
+      "en": "Font",
+      "fr": "Police"
+    }
+  },
+  "menu_and_locale_relative_font_size": {
+    "type": "select",
+    "type_spec": [
+      "default=N",
+      "choices=S,N,L,XL"
+    ],
+    "value": "N",
+    "replaces": [
+      {
+        "navigation_block_font_size": "font_size_to_relative"
+      }
+    ],
+    "title": {
+      "en": "Font size",
+      "fr": "Taille de la police"
+    }
+  },
+  "navigation_block_font_weight": {
+    "type": "font-weight",
+    "value": "normal",
+    "title": {
+      "en": "Font weight",
+      "fr": "Epaisseur de la police"
+    }
+  },
+  "navigation_block_internal_alignment": {
+    "type": "align",
+    "type_spec": [
+      "lcr",
+      "default=left"
+    ],
+    "value": "left",
+    "title": {
+      "en": "Alignment within left column",
+      "fr": "Alignement dans la colonne de gauche"
+    }
+  },
+  "navigation_block_link_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Links color",
+      "fr": "Couleur des liens"
+    }
+  },
+  "navigation_block_link_hover_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#0053c1",
+    "title": {
+      "en": "Links color (mouse over)",
+      "fr": "Couleur des liens (passage souris)"
+    }
+  },
+  "navigation_block_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Text color",
+      "fr": "Couleur du texte"
+    }
+  },
+  "overlay_ctrl_background_alpha": {
+    "type": "numeric",
+    "type_spec": [
+      "max=1",
+      "pres=1",
+      "step=0.1",
+      "default=0.3"
+    ],
+    "value": "0.9",
+    "title": {
+      "en": "Background opacity",
+      "fr": "Opacité de l'arrière plan"
+    }
+  },
+  "overlay_ctrl_background_color": {
+    "type": "color",
+    "type_spec": [
+      "default=#000000"
+    ],
+    "value": "#000000",
+    "title": {
+      "en": "Background color",
+      "fr": "Couleur de fond"
+    },
+    "help": {
+      "en": "Background for icons and text overlaid on images",
+      "fr": "Fond des icônes et textes en surimpression sur les images"
+    }
+  },
+  "page_sides_vw_margin": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=vw",
+      "min=2",
+      "max=7",
+      "default=4"
+    ],
+    "value": "4",
+    "replaces": [
+      {
+        "page_margin_sides": "pixel_size_to_vw"
+      }
+    ],
+    "title": {
+      "en": "White space on each side of page",
+      "fr": "Espace vide de chaque côté de la page"
+    },
+    "help": {
+      "en": "Allows your website to \"breathe\".",
+      "fr": "Permet à votre site de \"respirer\"."
+    }
+  },
+  "page_top_bottom_vh_margin": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=vh",
+      "min=2",
+      "max=10",
+      "default=3"
+    ],
+    "value": "3",
+    "replaces": [
+      {
+        "page_margin_top_bottom": "pixel_size_to_vh"
+      }
+    ],
+    "title": {
+      "en": "White space on top and bottom of page",
+      "fr": "Espace vide en haut et bas de page"
+    },
+    "help": {
+      "en": "Allows your website to \"breathe\".",
+      "fr": "Permet à votre site de \"respirer\"."
+    }
+  },
+  "headings_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "replaces": [
+      "page_title_color"
+    ],
+    "title": {
+      "en": "Headings color",
+      "fr": "Couleur des titres"
+    }
+  },
+  "headings_font_family": {
+    "type": "font",
+    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "replaces": [
+      "page_title_font_family"
+    ],
+    "title": {
+      "en": "Headings font",
+      "fr": "Police des titres"
+    }
+  },
+  "page_title_relative_font_size": {
+    "type": "select",
+    "type_spec": [
+      "default=XL",
+      "choices=S,N,L,XL,XXL"
+    ],
+    "value": "N",
+    "replaces": [
+      {
+        "page_title_font_size": "font_size_to_relative"
+      }
+    ],
+    "title": {
+      "en": "Page title size",
+      "fr": "Taille du titre de page"
+    }
+  },
+  "headings_font_weight": {
+    "type": "font-weight",
+    "value": "bold",
+    "replaces": [
+      "page_title_font_weight"
+    ],
+    "title": {
+      "en": "Headings weight",
+      "fr": "Epaisseur des titres"
+    }
+  },
+  "headings_text_transform": {
+    "type": "text-transform",
+    "type_spec": [
+      "default=uppercase"
+    ],
+    "value": "uppercase",
+    "replaces": [
+      "page_title_text_transform"
+    ],
+    "title": {
+      "en": "Headings case",
+      "fr": "Casse des titres"
+    }
+  },
+  "popup_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#ffffff",
+    "title": {
+      "en": "Popups background color",
+      "fr": "Couleur de fond des popups"
+    }
+  },
+  "popup_link_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#003478",
+    "title": {
+      "en": "Popups links color",
+      "fr": "Couleur des liens des popups"
+    }
+  },
+  "popup_text_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "#003478",
+    "title": {
+      "en": "Popups text color",
+      "fr": "Couleur du texte des popups"
+    }
+  },
+  "search_component_background_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Search dialog background color",
+      "fr": "Couleur du fond du dialogue de recherche"
+    }
+  },
+  "search_component_background_opacity": {
+    "type": "numeric",
+    "type_spec": [
+      "max=1",
+      "pres=1",
+      "step=0.1",
+      "default=0.9"
+    ],
+    "value": "0.9",
+    "title": {
+      "en": "Search dialog background opacity",
+      "fr": "Opacité du fond du dialogue de recherche"
+    }
+  },
+  "search_component_input_color": {
+    "type": "color",
+    "type_spec": [
+      "optional"
+    ],
+    "value": "",
+    "title": {
+      "en": "Search dialog input field color",
+      "fr": "Couleur du champ de saisie du dialogue de recherche"
+    }
+  },
+  "slideshow_overlay_color_dark": {
+    "type": "color",
+    "type_spec": [
+      "default=#000000"
+    ],
+    "value": "#000000",
+    "title": {
+      "en": "Overlaid text color",
+      "fr": "Couleur du texte en surimpression"
+    },
+    "help": {
+      "en": "DARK version",
+      "fr": "Version FONCÉE"
+    }
+  },
+  "slideshow_overlay_color_light": {
+    "type": "color",
+    "type_spec": [
+      "default=#ffffff"
+    ],
+    "value": "#ffffff",
+    "title": {
+      "en": "Overlaid text color",
+      "fr": "Couleur du texte en surimpression"
+    },
+    "help": {
+      "en": "LIGHT version",
+      "fr": "Version CLAIRE"
+    }
+  },
+  "sub_menu_font_size": {
+    "type": "numeric",
+    "type_spec": [
+      "unit=%",
+      "max=100",
+      "default=90"
+    ],
+    "value": "90",
+    "title": {
+      "en": "Sub menus font size",
+      "fr": "Taille de la police des sous menus"
+    }
+  }
+}
