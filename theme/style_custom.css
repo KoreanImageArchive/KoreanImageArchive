@@ -446,8 +446,14 @@ max-height: 85vh !important;
 .media_detail_media .media_wrap {
 width: fit-content;
 width: -moz-fit-content;
+margin-left: auto;
+margin-right: auto;
 }
 
+#page_overlay .media_detail_media .media_wrap {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
