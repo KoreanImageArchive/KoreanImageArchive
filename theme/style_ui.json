@@ -40,7 +40,9 @@
       "page_title_relative_font_size",
       "images_frame_width",
       "images_frame_color",
-      "thumbnails_grid_margin"
+      "thumbnails_grid_margin",
+      "main_background_image",
+      "max_text_block_rem_width"
     ],
     "components": [
       "mainc"
@@ -54,32 +56,7 @@
     "params": [
       "layout_horizontal_breakpoint",
       "page_top_bottom_vh_margin",
-      "page_sides_vw_margin",
-      "max_text_block_rem_width",
-      "main_background_image"
-    ],
-    "components": [
-      "NONE*"
-    ]
-  },
-  {
-    "title": {
-      "en": "Horizontal logo bar",
-      "fr": "Barre horizontale du logo"
-    },
-    "params": [
-      "logo_background_color",
-      "logo_background_opacity",
-      "logo_alignment",
-      "logo_img_max_width",
-      "logo_font_size",
-      "logo_text_color",
-      "logo_font_family",
-      "logo_font_weight",
-      "logo_text_transform"
-    ],
-    "components": [
-      "logo"
+      "page_sides_vw_margin"
     ]
   },
   {
@@ -88,6 +65,7 @@
       "fr": "Colonne de navigation"
     },
     "params": [
+      "left_column_and_logo_img_rem_width",
       "navigation_block_font_family",
       "navigation_block_font_weight",
       "navigation_block_text_color",
@@ -96,17 +74,35 @@
       "navigation_block_active_menu_color",
       "navigation_block_background_color",
       "navigation_block_background_opacity",
-      "navigation_block_internal_alignment",
-      "left_column_rem_width"
+      "navigation_block_internal_alignment"
     ],
     "blocks": [
       "navib"
     ],
     "components": [
+      "logo*",
       "menu*",
       "local*",
       "links*",
       "hdtxt*"
+    ]
+  },
+  {
+    "title": {
+      "en": "Logo",
+      "fr": "Logo"
+    },
+    "params": [
+      "logo_background_color",
+      "logo_text_color",
+      "logo_font_family",
+      "logo_font_weight",
+      "logo_font_size",
+      "logo_text_transform",
+      "logo_margin_bottom"
+    ],
+    "components": [
+      "logo"
     ]
   },
   {
@@ -136,15 +132,6 @@
   },
   {
     "title": {
-      "en": "Header text",
-      "fr": "Texte d'en-tête"
-    },
-    "components": [
-      "hdtxt"
-    ]
-  },
-  {
-    "title": {
       "en": "Social network icons",
       "fr": "Icônes réseaux sociaux"
     },
@@ -156,6 +143,15 @@
     ],
     "components": [
       "links"
+    ]
+  },
+  {
+    "title": {
+      "en": "Text below menu",
+      "fr": "Texte sous le menu"
+    },
+    "components": [
+      "hdtxt"
     ]
   },
   {

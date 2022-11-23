@@ -24,7 +24,7 @@
       "optional",
       "with_alpha"
     ],
-    "value": "rgb(0, 52, 120)",
+    "value": "",
     "title": {
       "en": "Background color",
       "fr": "Couleur de fond"
@@ -85,7 +85,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "capitalize",
+    "value": "",
     "title": {
       "en": "Text case",
       "fr": "Casse du texte"
@@ -111,7 +111,7 @@
       "max=20",
       "default=0"
     ],
-    "value": "8",
+    "value": "0",
     "title": {
       "en": "Buttons rounded corners",
       "fr": "Coins arrondis des boutons"
@@ -129,13 +129,24 @@
   },
   "main_font_family": {
     "type": "font",
-    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "value": "\"Helvetica Neue\", Arial, Helvetica, sans-serif",
     "replaces": [
       "default_font_family"
     ],
     "title": {
       "en": "Main font",
       "fr": "Police principale"
+    }
+  },
+  "main_font_weight": {
+    "type": "font-weight",
+    "value": "",
+    "replaces": [
+      "default_font_weight"
+    ],
+    "title": {
+      "en": " Main font weight",
+      "fr": "Epaisseur de la police principale"
     }
   },
   "main_font_size": {
@@ -146,13 +157,13 @@
       "max=24",
       "default=12"
     ],
-    "value": "12",
+    "value": "11",
     "replaces": [
       "default_font_size"
     ],
     "title": {
-      "en": "Font size",
-      "fr": "Taille de police"
+      "en": "Main font size",
+      "fr": "Taille de police principale"
     }
   },
   "base_line_height_ratio": {
@@ -174,20 +185,9 @@
       "fr": "Ratio entre hauteur de ligne et taille du texte"
     }
   },
-  "main_font_weight": {
-    "type": "font-weight",
-    "value": "bold",
-    "replaces": [
-      "default_font_weight"
-    ],
-    "title": {
-      "en": " Text font weight",
-      "fr": "Epaisseur du texte"
-    }
-  },
   "main_accent_color": {
     "type": "color",
-    "value": "#003478",
+    "value": "#0000ff",
     "replaces": [
       "default_accent_color"
     ],
@@ -205,7 +205,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#006fff",
+    "value": "#0000ff",
     "replaces": [
       "default_link_color"
     ],
@@ -219,7 +219,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#003478",
+    "value": "#0000ff",
     "replaces": [
       "default_link_hover_color"
     ],
@@ -230,7 +230,7 @@
   },
   "main_text_color": {
     "type": "color",
-    "value": "#444444",
+    "value": "#333333",
     "replaces": [
       "default_text_color"
     ],
@@ -258,7 +258,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "",
+    "value": "#333333",
     "replaces": [
       "drawer_tab_text_color"
     ],
@@ -280,8 +280,8 @@
       "fr": "Forme arrondie"
     },
     "help": {
-      "en": "From 0% for square icons to 50% for round icons.",
-      "fr": "De 0% pour des icônes carrées à 50% pour des icônes rondes."
+      "en": "From 0% for square icons to 50% for round icons",
+      "fr": "De 0% pour des icônes carrées à 50% pour des icônes rondes"
     }
   },
   "external_links_border_width": {
@@ -291,14 +291,14 @@
       "max=10",
       "default=1"
     ],
-    "value": "0",
+    "value": "1",
     "title": {
       "en": "Border width",
       "fr": "Largeur de la bordure"
     },
     "help": {
-      "en": "Icons border width. 0px to remove border.",
-      "fr": "Largeur de la bordure de chaque icône. 0px pour supprimer la bordure."
+      "en": "Icons border width. 0px to remove border",
+      "fr": "Largeur de la bordure de chaque icône. 0px pour supprimer la bordure"
     }
   },
   "external_links_palette": {
@@ -313,8 +313,8 @@
       "fr": "Palette de couleurs"
     },
     "help": {
-      "en": "\"normal\" (like menu links) or \"inverted\" (badges).",
-      "fr": "\"normal\" (comme les autres liens) ou \"inverted\" (badges)."
+      "en": "\"normal\" (like menu links) or \"inverted\" (badges)",
+      "fr": "\"normal\" (comme les autres liens) ou \"inverted\" (badges)"
     }
   },
   "external_links_relative_size": {
@@ -400,9 +400,9 @@
     "type_spec": [
       "unit=px",
       "max=20",
-      "default=8"
+      "default=4"
     ],
-    "value": "8",
+    "value": "20",
     "replaces": [
       "grid_margin"
     ],
@@ -446,15 +446,15 @@
     "type_spec": [
       "unit=px",
       "max=30",
-      "default=0"
+      "default=20"
     ],
-    "value": "0",
+    "value": "20",
     "title": {
       "en": "Sub menus text indent",
       "fr": "Indentation des sous menus"
     }
   },
-  "left_column_rem_width": {
+  "left_column_and_logo_img_rem_width": {
     "type": "numeric",
     "type_spec": [
       "unit=rem",
@@ -462,7 +462,7 @@
       "max=30",
       "default=14"
     ],
-    "value": "19",
+    "value": "15",
     "replaces": [
       {
         "left_column_width": "pixel_size_to_rem"
@@ -484,23 +484,9 @@
       "fr": "Couleur de l'arrière plan du logo"
     }
   },
-  "logo_background_opacity": {
-    "type": "numeric",
-    "type_spec": [
-      "max=1",
-      "pres=1",
-      "step=0.1",
-      "default=0.9"
-    ],
-    "value": "0.9",
-    "title": {
-      "en": "Logo background opacity",
-      "fr": "Opacité de l'arrière plan du logo"
-    }
-  },
   "logo_font_family": {
     "type": "font",
-    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "value": "",
     "title": {
       "en": "Logo font",
       "fr": "Police du logo"
@@ -509,45 +495,43 @@
   "logo_font_weight": {
     "type": "font-weight",
     "type_spec": [
-      "default=300"
+      "default=700"
     ],
-    "value": "bold",
+    "value": "700",
     "title": {
-      "en": "Logo text weight",
+      "en": "Logo text font weight",
       "fr": "Epaisseur du texte du logo"
     }
   },
   "logo_font_size": {
     "type": "numeric",
     "type_spec": [
-      "unit=px",
+      "unit=pt",
       "min=8",
       "max=48",
-      "default=32"
+      "default=20"
     ],
-    "value": "26",
+    "value": "20",
     "replaces": [
-      "logo_height_large"
+      "logo_font_size_large"
     ],
     "title": {
       "en": "Logo font size",
       "fr": "Taille de la police du logo"
     }
   },
-  "logo_img_max_width": {
+  "logo_margin_bottom": {
     "type": "numeric",
     "type_spec": [
       "unit=px",
-      "max=800",
-      "default=250"
+      "min=0",
+      "max=50",
+      "default=26"
     ],
-    "value": "291",
-    "replaces": [
-      "left_column_width"
-    ],
+    "value": "26",
     "title": {
-      "en": "Logo image size (max width)",
-      "fr": "Taille du logo image (largeur max)"
+      "en": "White space below logo",
+      "fr": "Espace sous le logo"
     }
   },
   "logo_text_color": {
@@ -555,7 +539,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#003478",
+    "value": "",
     "title": {
       "en": "Logo text color",
       "fr": "Couleur du texte du logo"
@@ -564,29 +548,17 @@
   "logo_text_transform": {
     "type": "text-transform",
     "type_spec": [
-      "default=uppercase"
+      "optional"
     ],
-    "value": "uppercase",
+    "value": "",
     "title": {
       "en": "Logo case",
       "fr": "Casse du logo"
     }
   },
-  "logo_alignment": {
-    "type": "align",
-    "type_spec": [
-      "lcr",
-      "default=left"
-    ],
-    "value": "left",
-    "title": {
-      "en": "Logo justification",
-      "fr": "Alignement du logo"
-    }
-  },
   "main_background_color": {
     "type": "color",
-    "value": "#FFFFFF",
+    "value": "#faf5e9",
     "title": {
       "en": "Background color",
       "fr": "Couleur de l'arrière plan"
@@ -612,7 +584,7 @@
       "max=200",
       "default=70"
     ],
-    "value": "70",
+    "value": "200",
     "replaces": [
       {
         "max_text_block_width": "pixel_size_to_rem"
@@ -626,9 +598,9 @@
   "menu_item_text_transform": {
     "type": "text-transform",
     "type_spec": [
-      "default=uppercase"
+      "optional"
     ],
-    "value": "uppercase",
+    "value": "",
     "title": {
       "en": "Menu text case",
       "fr": "Casse des liens du menu"
@@ -639,7 +611,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#0053c1",
+    "value": "",
     "title": {
       "en": "Active menu link color",
       "fr": "Couleur du lien de menu actif"
@@ -692,10 +664,18 @@
   },
   "navigation_block_font_family": {
     "type": "font",
-    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "value": "",
     "title": {
       "en": "Font",
       "fr": "Police"
+    }
+  },
+  "navigation_block_font_weight": {
+    "type": "font-weight",
+    "value": "",
+    "title": {
+      "en": " Text font weight",
+      "fr": "Epaisseur du texte"
     }
   },
   "menu_and_locale_relative_font_size": {
@@ -715,19 +695,11 @@
       "fr": "Taille de la police"
     }
   },
-  "navigation_block_font_weight": {
-    "type": "font-weight",
-    "value": "normal",
-    "title": {
-      "en": "Font weight",
-      "fr": "Epaisseur de la police"
-    }
-  },
   "navigation_block_internal_alignment": {
     "type": "align",
     "type_spec": [
       "lcr",
-      "default=left"
+      "default=right"
     ],
     "value": "left",
     "title": {
@@ -751,7 +723,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#0053c1",
+    "value": "#0000ff",
     "title": {
       "en": "Links color (mouse over)",
       "fr": "Couleur des liens (passage souris)"
@@ -774,9 +746,9 @@
       "max=1",
       "pres=1",
       "step=0.1",
-      "default=0.3"
+      "default=0.6"
     ],
-    "value": "0.9",
+    "value": "0.6",
     "title": {
       "en": "Background opacity",
       "fr": "Opacité de l'arrière plan"
@@ -859,7 +831,7 @@
   },
   "headings_font_family": {
     "type": "font",
-    "value": "Georgia, Palatino, \"Palatino Linotype\", Times, \"Times New Roman\", serif",
+    "value": "\"Helvetica Neue\", Arial, Helvetica, sans-serif",
     "replaces": [
       "page_title_font_family"
     ],
@@ -868,13 +840,27 @@
       "fr": "Police des titres"
     }
   },
+  "headings_font_weight": {
+    "type": "font-weight",
+    "type_spec": [
+      "default=700"
+    ],
+    "value": "700",
+    "replaces": [
+      "page_title_font_weight"
+    ],
+    "title": {
+      "en": "Headings weight",
+      "fr": "Epaisseur des titres"
+    }
+  },
   "page_title_relative_font_size": {
     "type": "select",
     "type_spec": [
       "default=XL",
       "choices=S,N,L,XL,XXL"
     ],
-    "value": "N",
+    "value": "XL",
     "replaces": [
       {
         "page_title_font_size": "font_size_to_relative"
@@ -885,23 +871,12 @@
       "fr": "Taille du titre de page"
     }
   },
-  "headings_font_weight": {
-    "type": "font-weight",
-    "value": "bold",
-    "replaces": [
-      "page_title_font_weight"
-    ],
-    "title": {
-      "en": "Headings weight",
-      "fr": "Epaisseur des titres"
-    }
-  },
   "headings_text_transform": {
     "type": "text-transform",
     "type_spec": [
-      "default=uppercase"
+      "optional"
     ],
-    "value": "uppercase",
+    "value": "",
     "replaces": [
       "page_title_text_transform"
     ],
@@ -915,7 +890,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#ffffff",
+    "value": "",
     "title": {
       "en": "Popups background color",
       "fr": "Couleur de fond des popups"
@@ -926,7 +901,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#003478",
+    "value": "",
     "title": {
       "en": "Popups links color",
       "fr": "Couleur des liens des popups"
@@ -937,7 +912,7 @@
     "type_spec": [
       "optional"
     ],
-    "value": "#003478",
+    "value": "",
     "title": {
       "en": "Popups text color",
       "fr": "Couleur du texte des popups"
@@ -960,9 +935,9 @@
       "max=1",
       "pres=1",
       "step=0.1",
-      "default=0.9"
+      "default=0.8"
     ],
-    "value": "0.9",
+    "value": "0.0",
     "title": {
       "en": "Search dialog background opacity",
       "fr": "Opacité du fond du dialogue de recherche"
@@ -973,25 +948,23 @@
     "type_spec": [
       "optional"
     ],
-    "value": "",
+    "value": "#333333",
     "title": {
       "en": "Search dialog input field color",
       "fr": "Couleur du champ de saisie du dialogue de recherche"
     }
   },
-  "slideshow_overlay_color_dark": {
-    "type": "color",
+  "sub_menu_font_size": {
+    "type": "numeric",
     "type_spec": [
-      "default=#000000"
+      "unit=%",
+      "max=100",
+      "default=90"
     ],
-    "value": "#000000",
+    "value": "90",
     "title": {
-      "en": "Overlaid text color",
-      "fr": "Couleur du texte en surimpression"
-    },
-    "help": {
-      "en": "DARK version",
-      "fr": "Version FONCÉE"
+      "en": "Sub menus font size",
+      "fr": "Taille de la police des sous menus"
     }
   },
   "slideshow_overlay_color_light": {
@@ -1009,17 +982,19 @@
       "fr": "Version CLAIRE"
     }
   },
-  "sub_menu_font_size": {
-    "type": "numeric",
+  "slideshow_overlay_color_dark": {
+    "type": "color",
     "type_spec": [
-      "unit=%",
-      "max=100",
-      "default=90"
+      "default=#000000"
     ],
-    "value": "90",
+    "value": "#000000",
     "title": {
-      "en": "Sub menus font size",
-      "fr": "Taille de la police des sous menus"
+      "en": "Overlaid text color",
+      "fr": "Couleur du texte en surimpression"
+    },
+    "help": {
+      "en": "DARK version",
+      "fr": "Version FONCÉE"
     }
   }
 }

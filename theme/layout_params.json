@@ -1,12 +1,18 @@
 {
   "general": {
-    "title": "#3",
+    "title": "#1",
     "template_version": "4.0",
     "typekit_code": null,
     "page_titles": 9,
     "variant_name": null
   },
   "blocks": {
+    "footer": {
+      "title": null,
+      "locale": "en",
+      "display_title": false,
+      "disable_title_edition": false
+    },
     "navib": {
       "title": "Navigation",
       "locale": "en",
@@ -16,8 +22,8 @@
   },
   "components": {
     "logo": {
-      "asset": "919a915f-2468-484f-84e7-ec1d0a83ed08",
-      "title": "Korean Image Archive",
+      "asset": "8f1097c2-db68-4d24-b159-78b683f23289",
+      "title": "Logo",
       "display_title": false,
       "locale": "en",
       "enabled": true
@@ -40,7 +46,7 @@
     },
     "menu": {
       "menu": "",
-      "separators_content": "•",
+      "separators_content": "",
       "item_prefix": "",
       "item_suffix": "",
       "item_separators": "",
@@ -52,22 +58,22 @@
     "local": {
       "display_style": "short_links",
       "separator": "•",
-      "title": "",
-      "display_title": false,
-      "locale": "en",
-      "enabled": false
-    },
-    "links": {
       "title": null,
       "display_title": false,
       "locale": "en",
       "enabled": true
     },
+    "links": {
+      "title": "",
+      "display_title": false,
+      "locale": "en",
+      "enabled": false
+    },
     "searc": {
-      "default_value": "검색 - Search",
+      "default_value": "Image search",
       "display_submit_button": true,
-      "title": "검색 - Search",
-      "display_title": true,
+      "title": "Search",
+      "display_title": false,
       "locale": "en",
       "enabled": false,
       "es_translated_default_value": "Búsqueda",
@@ -77,27 +83,26 @@
       "fr_translated_default_value": "Recherche d'images",
       "fr_translated_title": "Recherche"
     },
-    "fttxt": {
-      "text": "<!-- Begin Mailchimp Signup Form -->\r\n<link href=\"//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css\" rel=\"stylesheet\" type=\"text/css\">\r\n<style type=\"text/css\">\r\n\t\r\n</style>\r\n<div id=\"mc_embed_signup\">\r\n<form action=\"https://gmail.us7.list-manage.com/subscribe/post?u=fe5f15564768538ec49c8d17f&amp;id=4fa03a8ebb\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n    <div id=\"mc_embed_signup_scroll\">\r\n\t<label for=\"mce-EMAIL\">업데이트 구독</label>\r\n\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"이메일 주소\" required>\r\n    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_fe5f15564768538ec49c8d17f_4fa03a8ebb\" tabindex=\"-1\" value=\"\"></div>\r\n    <div class=\"clear\"><input type=\"submit\" value=\"구독\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\r\n    </div>\r\n</form>\r\n</div>\r\n\r\n<!--End mc_embed_signup-->\r\n \r\n <!-- Begin Mailchimp Signup Form -->\r\n<link href=\"//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css\" rel=\"stylesheet\" type=\"text/css\">\r\n<style type=\"text/css\">\r\n\r\n</style>\r\n<div id=\"mc_embed_signup\">\r\n<form action=\"https://koreanimage.us7.list-manage.com/subscribe/post?u=542b2e79e363f9088bdaf5c12&amp;id=9ddbb42fca\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n    <div id=\"mc_embed_signup_scroll\">\r\n\t<label for=\"mce-EMAIL\">Subscribe for Updates</label>\r\n\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"email address\" required>\r\n    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_542b2e79e363f9088bdaf5c12_9ddbb42fca\" tabindex=\"-1\" value=\"\"></div>\r\n    <div class=\"clear\"><input type=\"submit\" value=\"Enter\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\r\n    </div>\r\n</form>\r\n</div>\r\n\r\n<!--End mc_embed_signup-->\r\n",
-      "title": "Footer text",
-      "display_title": false,
-      "locale": "en",
-      "enabled": true,
-      "fr_translated_title": "Texte pied de page"
-    },
-    "pwrdb": {
-      "title": "",
-      "display_title": false,
-      "locale": "en",
-      "enabled": false
-    },
     "hdtxt": {
-      "text": "<form accept-charset=\"UTF-8\" action=\"///www.koreanimage.com/\" method=\"get\">\r\n <div style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\" value=\"✓\"></div>\r\n <input name=\"search\" placeholder=\"검색 - Search\" type=\"search\">\r\n <input name=\"commit\" type=\"submit\" value=\"Go\">\r\n </form> \r\n\r\n<p><b>PayPal Button Here</b>\r\n\r\n<p><b>Patreon Button Here</b>\r\n <p><b>contact@KoreanImage.com</b></p>",
+      "text": "<div class=\"search-bar\"><form accept-charset=\"UTF-8\" action=\"///www.koreanimage.com\" method=\"get\">\r\n<img class=\"search-icon\" src=\"data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K\" />\r\n<input name=\"search\" placeholder=\"\" type=\"search\">\r\n<input name=\"commit\" type=\"submit\" value=\"Go\">\r\n</form></div>",
       "title": "Text below menu",
       "display_title": false,
       "locale": "en",
       "enabled": true,
       "fr_translated_title": "Texte sous menu"
+    },
+    "fttxt": {
+      "text": "<div class=\"footer-content\">\r\n\r\n<a href=\"https://www.paypal.com/paypalme/bnaujok\" target=\"new\" class=\"donate footerpad\"><span style=\"margin-right:30px;font-size:calc(14px + 1vw);\">기부</span><span style=\"font-size:calc(12px + 1vw);\">Donate</span></a>\r\n\r\n<a href=\"https://www.patreon.com/koreanimage\" target=\"new\" class=\"patreon footerpad\">\r\n<img class=\"patreon-icon\" src=\"https://www.dropbox.com/s/d4xbnhlw86zpjjn/Patreonlogo.svg?raw=1\">\r\n</a>\r\n\r\n<div class=\"social footerpad\">\r\n\r\n<a href=\"https://instagram.com/koreanimage/\" target=\"new\"><img class=\"social-icons\" src=\"https://www.dropbox.com/s/xq0pux69ssjzuhu/Instagram.svg?raw=1\">\r\n</a>\r\n\r\n<a href=\"https://facebook.com/KoreanImageArchive\" target=\"new\"><img class=\"social-icons\" src=\"https://www.dropbox.com/s/iuxw5nn3y9c8edn/Facebook.svg?raw=1\">\r\n</a>\r\n\r\n<a href=\"https://www.youtube.com/channel/UCPSgXhjwUB4XXcQZzsVV-CQ\" target=\"new\">\r\n<img class=\"social-icons\" src=\"https://www.dropbox.com/s/99zhw7mqurj53ej/Youtube.svg?raw=1\">\r\n</a>\r\n\r\n</div>\r\n\r\n<div class=\"contact footerpad\">\r\n<div><b>contact</b></div>\r\n<div>@koreanimage.com</div>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n<div class=\"email-signup footerpad\">\r\n\r\n\r\n\r\n<div id=\"mc_embed_signup\">\r\n\r\n<form action=\"https://koreanimage.us7.list-manage.com/subscribe/post?u=542b2e79e363f9088bdaf5c12&amp;id=9ddbb42fca\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\r\n\r\n\r\n    <div id=\"mc_embed_signup_scroll\">\r\n\t<span class=\"email-text\">업데이트 구독&nbsp;&nbsp;&nbsp;Subscribe for Updates</span>\r\n  \r\n\r\n  \r\n<div class=\"mc-field-group\">\r\n\t<label for=\"mce-EMAIL\">Email</label>\r\n\t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\">\r\n  <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\r\n</div>\r\n\r\n  <div class=\"mc-field-group input-group\">\r\n    <ul><li><input type=\"radio\" value=\"한국어\" name=\"MMERGE6\" id=\"mce-MMERGE6-0\"><label for=\"mce-MMERGE6-0\">한국어</label></li>\r\n<li><input type=\"radio\" value=\"English\" name=\"MMERGE6\" id=\"mce-MMERGE6-1\"><label for=\"mce-MMERGE6-1\">English</label></li></ul>\r\n</div>\r\n\r\n   <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_542b2e79e363f9088bdaf5c12_9ddbb42fca\" tabindex=\"-1\" value=\"\"></div>\r\n    \r\n\r\n\r\n\t<div id=\"mce-responses\" class=\"clear\">\r\n\t\t<div class=\"response\" id=\"mce-error-response\" style=\"display:none\"></div>\r\n\t\t<div class=\"response\" id=\"mce-success-response\" style=\"display:none\"></div>\r\n\t</div>\r\n  \r\n \r\n    \r\n    </div>\r\n    \r\n    \r\n</form>\r\n\r\n</div>\r\n\r\n\r\n\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div>",
+      "title": "",
+      "display_title": false,
+      "locale": "en",
+      "enabled": true
+    },
+    "pwrdb": {
+      "title": "",
+      "display_title": true,
+      "locale": "en",
+      "enabled": false
     }
   }
 }

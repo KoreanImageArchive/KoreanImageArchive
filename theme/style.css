@@ -1,132 +1,125 @@
+#main_block {
+padding-bottom: 500px;
+}
+
 $layout_horizontal_breakpoints: (
   /* "use mobile layout under this size" */
   'Never': 0px,
-  'Tablets': 1025px,
+  'Tablets': 1280px,
   'All device sizes': 99999px);
 $layout_horizontal_breakpoint: map-get($layout_horizontal_breakpoints, $layout_horizontal_breakpoint);
 
-$layout_vertical_breakpoint: 800px;
-
-$logo_bar_height: 120px; /* Initial value for space reserved under logo bar. Browsers that support CSS variables calculate value in JS */
+$hide_elements_on_media_pages_vertical_breakpoint: 900px;
 
 /* when converting from older themes with px sizing, ensure minimum margins are set  */
 $page_sides_vw_margin: max($page_sides_vw_margin, 2vw);
 $page_top_bottom_vh_margin: max($page_top_bottom_vh_margin, 2vh);
 
 $left_column_right_margin: max($page_sides_vw_margin / 2, 4vw);
-$_menu_btn_size: 44px;
 
 body.nav_visible {
   overflow: hidden;
 }
 
 #ws_page {
+position: relative;
   box-sizing: border-box;
-  padding: 0 $page_sides_vw_margin $page_top_bottom_vh_margin $page_sides_vw_margin;
-  padding: 0 $page_sides_vw_margin calc(#{$page_top_bottom_vh_margin} + var(--cookies-acceptance-bar-height, 0px) + var(--page-meta-bottom-height, 0px)) $page_sides_vw_margin;
   min-height: 100vh; /* Fallback if CSS variable is not understood */
   min-height: calc(100 * var(--vh)); /* Use --vh instead of vh for devices with optional toolbars */
+  padding-top: 60px;
 }
 
-#header_block {
-  position: relative; /* Needed to keep over background slideshow */
-  z-index: $cookies_acceptance_bar_zindex + 1;
-}
 
-#component_logo {
-  @include logo-component(
-    $align: $logo_alignment,
-    $display: block,
-    $img_max_width: $logo_img_max_width,
-    $font_size: $logo_font_size,
-    $font_family: $logo_font_family,
-    $font_weight: $logo_font_weight,
-    $text_transform: $logo_text_transform,
-    $text_color: $logo_text_color);
-  margin: 0 0-$page_sides_vw_margin 0 0-$page_sides_vw_margin; /* Edge to edge */
-  padding: $page_top_bottom_vh_margin $page_sides_vw_margin $base_line_height $page_sides_vw_margin;
-  border-right: $_menu_btn_size solid transparent;
-  @if $logo_alignment == 'center' {
-    /* Symmetrical padding */
-    border-left: $_menu_btn_size solid transparent;
-  }
-  @include colors(
-    $background_color: $logo_background_color,
-    $background_color_opacity: $logo_background_opacity);
-
-  @include component-filtered {
-    /* Component is hidden, force it to $page_top_bottom_vh_margin height */
-    height: $page_top_bottom_vh_margin;
-    display: block !important;
-    visibility: hidden;
-    padding: 0;
-  }
-}
-
+/* NAVIGATION BLOCK */
 $_navigation_block_background_color: presence($navigation_block_background_color, $main_background_color);
 $_navigation_block_text_color: presence($navigation_block_text_color, $main_text_color);
 $_navigation_block_link_color: presence($navigation_block_link_color, $main_text_color);
 $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color, $main_link_hover_color);
 
-#nav_toggle {
-  @include toggable-drawer-callout($align: 'center');
-  @include toggable-drawer-callout-icon(
-    $layout: 'def2',
-    $size: 24px,
-    $opened_selector: 'body.nav_visible &');
-  box-sizing: border-box;
-  position: fixed;
-  top: calc(#{$page_top_bottom_vh_margin} + (#{line-height-for($logo_font_size)} - #{$_menu_btn_size}) / 2);
-  right: $page_sides_vw_margin;
-  height: $_menu_btn_size;
-  width: $_menu_btn_size;
-  @include colors(
-    $text_color: enhance-color($main_text_color, presence($logo_background_color, $main_background_color)),
-    $hover_color: $main_link_hover_color);
-
-  body.nav_visible & {
-    @include colors(
-      $text_color: enhance-color($_navigation_block_text_color, $_navigation_block_background_color),
-      $hover_color: $_navigation_block_link_hover_color);
-  }
+#header_block {
+  margin: -$page_top_bottom_vh_margin 0-$page_sides_vw_margin 0; /* edge to edge */
 }
-
-/* NAVIGATION BLOCK */
 
 #block_navib {
   @include block($align: center);
   font-family: $navigation_block_font_family;
   font-weight: $navigation_block_font_weight;
-  padding: $base_line_height $base_line_height 0 $base_line_height;
+  margin-bottom: $base_line_height;
+  z-index: $cookies_acceptance_bar_zindex + 1;
+overflow-y: unset !important;
 
   @include colors(
     $text_color: $_navigation_block_text_color,
     $link_color: $_navigation_block_link_color,
-    $link_hover_color: $_navigation_block_link_hover_color,
-    $background_color: $_navigation_block_background_color,
-    $background_color_opacity: $navigation_block_background_opacity,
-    $slideshow_overlay: (
-      'text_color': true,
-      'link_color': true,
-      'link_hover_color': true,
-      'background_color': 'semi-transparent'));
+    $link_hover_color: $_navigation_block_link_hover_color)
 
-  @include toggable-drawer(
-    $layout: 'right',
-    $position: 'fixed',
-    $width: 100%,
-    $height: 100vh,
-    $vertical_align: 'center',
-    $visibility_selector: 'body.nav_visible &');
+  $_menu_btn_size: 44px;
+  #nav_toggle {
+    $_menu_icon_size: 24px;
+    @include toggable-drawer-callout($align: 'center');
+    @include toggable-drawer-callout-icon(
+      $layout: 'def2',
+      $size: $_menu_icon_size,
+      $opened_selector: 'body.nav_visible &');
+
+    box-sizing: border-box;
+    position: fixed;
+    height: $_menu_btn_size;
+    width: $_menu_btn_size;
+    top: calc(#{$page_top_bottom_vh_margin} + (#{line-height-for($logo_font_size)} - #{$_menu_btn_size}) / 2);
+    right: calc(#{$page_sides_vw_margin} - #{($_menu_btn_size - $_menu_icon_size) / 2});
+    @media screen and (min-width: $phone_horizontal_breakpoint) {
+      /* keep icon slightly offset */
+      right: $page_sides_vw_margin;
+    }
+    @include colors(
+      $text_color: enhance-color($main_text_color, presence($logo_background_color, $main_background_color)),
+      $hover_color: $main_link_hover_color);
+
+    body.nav_visible & {
+      @include colors(
+        $text_color: enhance-color($_navigation_block_text_color, $_navigation_block_background_color),
+        $hover_color: $_navigation_block_link_hover_color);
+    }
+  }
+
+  #toggable_nav {
+    @include toggable-drawer(
+      $layout: 'right',
+      $position: 'fixed',
+      $width: 100%,
+      $height: 100vh,
+      $vertical_align: 'center',
+      $visibility_selector: 'body.nav_visible &');
+    padding: $base_line_height $base_line_height 0 $base_line_height;
+    @include colors(
+      $background_color: $_navigation_block_background_color,
+      $background_color_opacity: $navigation_block_background_opacity,
+      $slideshow_overlay: ( 'background_color': 'semi-transparent' ));
+  }
+
+  #component_logo {
+    @include logo-component(
+      $align: center,
+      $display: 'full_width',
+      $img_width: $left_column_and_logo_img_rem_width,
+      $font_family: $logo_font_family,
+      $font_weight: $logo_font_weight,
+      $font_size: $logo_font_size,
+      $text_transform: $logo_text_transform,
+      $text_color: $logo_text_color,
+      $background_color: $logo_background_color);
+    padding: $page_top_bottom_vh_margin calc(#{$page_sides_vw_margin} + #{$base_line_height} + #{$_menu_btn_size}) $base_line_height;
+  }
 
   #component_menu {
     @include menu-component(
       $layout: 'vertical',
-      $display: 'full_width',
       $align: center,
-      $font_size: $menu_and_locale_relative_font_size,
+      $display: 'full_width',
       $sub_menu_indent: 0,
       $separators: 'hidden',
+      $font_size: $menu_and_locale_relative_font_size,
       $sub_menu_font_size: $sub_menu_font_size,
       $link_active_color: presence($navigation_block_active_menu_color, $main_link_color),
       $underline_active: if($menu_active_item_underline == 'Yes', true, false),
@@ -149,6 +142,7 @@ $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color
     margin: 0 0 $base_line_height 0;
   }
 
+
   #component_searc {
     @include search-component(
       $align: center,
@@ -165,24 +159,29 @@ $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color
     @include text-component(
       $align: center,
       $display: 'full_width');
-    margin: 2 * $base_line_height 0 $base_line_height 0;
+    margin: $base_line_height 0 $base_line_height 0;
   }
 }
 
-
-/* MAIN BLOCK */
-@if $logo_background_color and $logo_background_color != '' {
-  #main_block {
-    border-top: $base_line_height solid transparent;
-  }
-}
 
 /* Main content */
 #component_mainc {
-    @include main-component(
-      $max_text_block_width: $max_text_block_rem_width,
-      $page_meta_layout: 'page_title_nav_left_actions_right',
-      $page_meta_options: ( 'bottom_case_position': 'fixed_bottom', 'bottom_case_padding': 0 $page_sides_vw_margin ) );
+  @include main-component(
+    $max_text_block_width: $max_text_block_rem_width,
+    $page_meta_layout: 'page_title_nav_left_actions_right',
+    $page_meta_options: ( 'bottom_case_position': 'fixed_bottom', 'bottom_case_padding': 0 $page_sides_vw_margin ) );
+
+  @media screen and (max-width:$phone_horizontal_breakpoint) {
+    @include main-component-offset-content(
+      $medias_list: true,
+      $slideshow: true,
+      $left: -$page_sides_vw_margin,
+      $right: -$page_sides_vw_margin);
+
+    @include slideshow-any-content-offset(
+      $left: $page_sides_vw_margin,
+      $right: $page_sides_vw_margin);
+  }
 }
 
 /* Comments */
@@ -191,120 +190,73 @@ $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color
   margin: (2 * $base_line_height) 0;
 }
 
-/* Footer text */
-#component_fttxt {
-  @include text-component(
-    $align: center,
-    $display: block,
-    $font_size: $footer_relative_font_size);
-  @include colors(
-    $text_color: presence($footer_text_color, $main_text_color),
-    $link_color: presence($footer_link_color, $main_link_color),
-    $link_hover_color: presence($footer_link_hover_color, $main_link_hover_color));
-  margin-top: $base_line_height;
+/* FOOTER */
 
-  position: sticky;
-  top: 100%;
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* IE 10, 11 */
-    z-index: 1;
-    position: fixed;
-    top: auto;
-    bottom: $page_top_bottom_vh_margin;
-    box-sizing: border-box;
-    width: calc(100% - #{2 * $page_sides_vw_margin});
-    @include colors($background_color: $main_background_color, $background_color_opacity: 0.8);
-  }
-}
 
 
 /* Adjust slideshow overal element position to avoid overlaps */
 #ws_page.page_slideshow-site_bg {
   @include slideshow-overlay-content-offset(
     $top: $page_top_bottom_vh_margin,
-    $bottom: $page_top_bottom_vh_margin ,
+    $bottom: $page_top_bottom_vh_margin,
     $right: $page_sides_vw_margin,
     $left: $page_sides_vw_margin);
 }
 
 
-#component_pwrdb {
-  @include poweredby-component($layout: 'bottom-right-corner');
-}
-
-@mixin out-of-flow-logo-and-nav($position) {
-  #header_block {
-    position: $position;
-    top: 0;
-    left: 0;
-    padding-right: $page_sides_vw_margin;
-    padding-left: $page_sides_vw_margin;
-    box-sizing: border-box;
-    width: 100%;
-    pointer-events: none;
-    #block_navib, #component_logo a, #nav_toggle { pointer-events: auto; }
-  }
-
-  #main_block {
-    padding-top: $logo_bar_height;
-    padding-top: var(--logo-bar-height, $logo_bar_height); /* Value calculated in JS */
-  }
-}
-
-@media screen and (min-height: $layout_vertical_breakpoint) {
-  /* Tall enough viewport to keep logo and nav toggle "fixed" */
-  @include out-of-flow-logo-and-nav($position: fixed);
-}
-
 @media screen and (min-width: $layout_horizontal_breakpoint) {
   /* large enough to switch to two-column layout */
-  @include out-of-flow-logo-and-nav($position: absolute);
-
   body.nav_visible {
     overflow: auto;
   }
 
+
+
   #header_block {
-    z-index: $cookies_acceptance_bar_zindex - 1;
-  }
-
-  #logo_and_nav {
-    padding-bottom: $page_top_bottom_vh_margin;
-    padding-bottom: calc(#{$page_top_bottom_vh_margin} + var(--cookies-acceptance-bar-height, 0px));
-  }
-
-  #component_logo {
-    width: calc(100% + #{2 * $page_sides_vw_margin}); /* Avoids horizontal scrollbar on body */
-    border-right: none;
-    @if $logo_alignment == 'center' {
-      /* Symmetrical padding */
-      border-left: none;
-    }
-  }
-
-  #nav_toggle {
-    display: none;
+    position: absolute;
+    width: $left_column_and_logo_img_rem_width;
+    margin: 0px 0px 0px 60px;
+    z-index: 2;
   }
 
   #block_navib {
-    @include toggable-drawer(
-      $layout: 'none',
-      $position: static,
-      $height: auto,
-      $vertical_align: 'cancel_center');
-    @include block($scrollbar: 'left');
+    @include block($align: center, $scrollbar: 'left');
+    max-height: 100%;
+    margin-bottom: 0;
+    z-index: auto; /* Needed by Safari to render search component */
 
-    @include colors(
-      $slideshow_overlay: ( 'background_color': transparent ));
-
-    @if $logo_background_color and $logo_background_color != '' {
-      margin-top: $base_line_height;
+    @if ($_navigation_block_background_color != $main_background_color) and ($navigation_block_background_opacity > 0) {
+      @include colors(
+        $background_color: $_navigation_block_background_color,
+        $background_color_opacity: $navigation_block_background_opacity);
+      padding: (0.5 * $base_line_height) $base_line_height 0;
+      box-sizing: border-box;
     }
-    width: $left_column_rem_width;
-    max-width: 100%;
-    @if $navigation_block_background_color and $navigation_block_background_color != '' {
-      padding: $base_line_height;
-    } @else {
+
+    #nav_toggle {
+      display: none;
+    }
+
+    #toggable_nav {
+      @include toggable-drawer(
+        $layout: 'none',
+        $position: static,
+        $height: auto,
+        $vertical_align: 'cancel_center');
+      @include colors($background_color: transparent);
       padding: 0;
+    }
+
+    #component_logo {
+      @include component($align: $navigation_block_internal_alignment);
+      @if $logo_background_color and ($logo_background_color != '') and ($logo_background_color != $_navigation_block_background_color) {
+        padding: $base_line_height 1rem;
+      } @else {
+        padding: 0;
+      }
+      padding-bottom: $logo_margin_bottom;
+      margin-bottom: $logo_margin_bottom;
+      border-bottom: 1px solid #515151;
     }
 
     #component_menu {
@@ -322,6 +274,10 @@ $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color
       @include external-links-component($align: $navigation_block_internal_alignment);
     }
 
+    #component_hdtxt {
+      @include text-component($align: $navigation_block_internal_alignment);
+    }
+
     #component_searc {
       @include search-component(
         $layout: 'drawer',
@@ -336,54 +292,39 @@ $_navigation_block_link_hover_color: presence($navigation_block_link_hover_color
         display: block;
       }
     }
-
-    #component_hdtxt {
-      @include text-component($align: $navigation_block_internal_alignment);
-    }
   }
 
-  #main_block,
-  #component_fttxt {
-    padding-left: calc(#{$left_column_rem_width} + #{$left_column_right_margin});
-  }
 
   #component_mainc {
     @include main-component-page-meta(
       $layout: 'page_title_nav_left_actions_right',
       $bottom_case_position: 'fixed_bottom',
-      $bottom_case_left: calc(#{$left_column_rem_width} + #{$left_column_right_margin}));
+      $bottom_case_left: calc(#{$left_column_and_logo_img_rem_width} + #{$left_column_right_margin}));
   }
 
-  /* Adjust slideshow overal element position to avoid overlaps */
-  #ws_page.page_slideshow-site_bg {
+
+.front-page > #main_block {
+margin-top: 83px;
+}
+
+
+#component_fttxt  {
+width: 100%;
+  }
+
+#main_block:not(.front-page > #main_block)  {
+margin-left: 450px;
+margin-right: 60px;
+  }
+
+#block_navib #component_menu li.menu_separator_item {
+    visibility: visible;
+    height: 10px;
+}
+
+/* Adjust slideshow overal element position to avoid overlaps */
+  #ws_page.page_slideshow-site_bg {
     @include slideshow-overlay-content-offset(
-      $left: calc(#{$left_column_rem_width} + #{$left_column_right_margin} + #{$page_sides_vw_margin}));
-  }
-
-  @media (min-height: $layout_vertical_breakpoint) {
-    /* Large and tall enough viewport to keep logo and nav toggle "fixed" */
-    @include out-of-flow-logo-and-nav($position: fixed);
-
-    #header_block { display: flex; } /* Needed for IE11 to effectivly limit height of #block_navib */
-
-    #logo_and_nav {
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-      max-height: 100vh;
-      max-height: calc(100 * var(--vh));
-      width: $left_column_rem_width;
-      pointer-events: auto; /* Allow scroll events */
-    }
-
-    #component_logo {
-      flex-shrink: 0;
-      width: 100vw;
-    }
-
-    #block_navib {
-      flex-shrink: 1;
-      max-height: 100%;
-    }
-  }
+      $left: calc(#{$left_column_and_logo_img_rem_width} + #{$left_column_right_margin + $page_sides_vw_margin}));
+}
 }

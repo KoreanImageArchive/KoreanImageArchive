@@ -1,21 +1,35 @@
 <pd-page>
-  <header id="header_block">
-    <div id="logo_and_nav">
-      <pd-component id="logo" type="logo_text" class="dont_overlap" height-as-css-var="logo-bar-height" />
-      <div id="nav_toggle" class="icon" data-click-toggle-class="body.nav_visible"><div><div></div></div></div>
-      <pd-block id="navib" tag="nav" class="dont_overlap">
-        <pd-component id="menu" type="menu" click-remove-class="body.nav_visible=a:not(.sub_menu_toggle)" />
-        <pd-component id="local" type="locale_switcher" click-remove-class="body.nav_visible=a" />
-        <pd-component id="links" type="external_links" />
-        <pd-component id="searc" type="search" hover-class="visible" click-toggle-class="visible=component_title" submit-remove-class="body.nav_visible" />
-        <pd-component id="hdtxt" type="text" />
-      </pd-block>
-    </div>
-  </header>
-  <main id="main_block">
-    <pd-component id="mainc" type="main_content" height-as-css-var="page-meta-bottom-height=.page_meta_bottom" />
-    <pd-component id="commt" type="comments" />
-  </main>
-  <pd-component id="fttxt" tag="footer" type="text" class="dont_overlap" />
-  <pd-component id="pwrdb" type="poweredby" />
+
+  <header id="header_block">
+    <pd-block id="navib">
+      <pd-component id="logo" type="logo_text" />
+      <div id="nav_toggle" class="icon" data-click-toggle-class="body.nav_visible"><div><div></div></div></div>
+      <nav id="toggable_nav">
+        <pd-component id="menu" type="menu" click-remove-class="body.nav_visible=a:not(.sub_menu_toggle)" />
+        <pd-component id="local" type="locale_switcher" click-remove-class="body.nav_visible=a" />
+        <pd-component id="links" type="external_links" />
+        <pd-component id="searc" type="search" hover-class="visible" click-toggle-class="visible=component_title" submit-remove-class="body.nav_visible" />
+        <pd-component id="hdtxt" type="text" />
+      </nav>
+    </pd-block>
+  </header>
+
+
+  <main id="main_block">
+    <pd-component id="mainc" type="main_content" height-as-css-var="page-meta-bottom-height=.page_meta_bottom" />
+    <pd-component id="commt" type="comments" />
+  </main>
+
+
+
+<div class="footer-wrap">
+
+ <pd-block id="footer" tag="footer" class="dont_overlap">
+    <pd-component id="fttxt" type="text" />
+    <pd-component id="pwrdb" type="poweredby" />
+  </pd-block>
+</div>
+
+
+
 </pd-page>
